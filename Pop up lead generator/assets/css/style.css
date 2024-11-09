@@ -1,0 +1,251 @@
+.plg-popup.hidden {
+    display: none;
+}
+
+.plg-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.plg-popup-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    transform: scale(0.8);
+    animation: popUp 0.4s ease forwards;
+}
+
+/* Animación de escala en el pop-up */
+@keyframes popUp {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.plg-popup-content h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 15px;
+}
+
+.plg-popup-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.plg-popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.plg-popup-content input[type="text"],
+.plg-popup-content input[type="email"] {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al enfocar los campos de texto */
+.plg-popup-content input[type="text"]:focus,
+.plg-popup-content input[type="email"]:focus {
+    border-color: #0073aa;
+    box-shadow: 0px 0px 8px rgba(0, 115, 170, 0.3);
+    outline: none;
+}
+
+.plg-popup-content button {
+    background-color: #0073aa;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto hover en el botón */
+.plg-popup-content button:hover {
+    background-color: #005f8a;
+    transform: translateY(-2px);
+}
+
+.plg-popup-content button:active {
+    transform: translateY(1px);
+}
+
+/* Botón de cierre estilizado */
+.plg-popup-content .plg-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.plg-popup-content .plg-close:hover {
+    color: #333;
+}
+
+/* General */
+.plg-popup.hidden {
+    display: none;
+}
+
+.plg-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+}
+
+/* Animación del Pop-Up */
+.plg-popup-content {
+    background-color: #aaa;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    transform: scale(0.95);
+    animation: fadeIn 0.5s ease, scaleUp 0.4s ease forwards;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.plg-popup-content h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.plg-popup-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.plg-popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.plg-popup-content input[type="text"],
+.plg-popup-content input[type="email"] {
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Foco en los inputs */
+.plg-popup-content input[type="text"]:focus,
+.plg-popup-content input[type="email"]:focus {
+    border-color: #0073e6;
+    box-shadow: 0 0 10px rgba(0, 115, 230, 0.2);
+}
+
+.plg-popup-content button {
+    background-color: #0073e6;
+    color: #fff;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover y foco del botón */
+.plg-popup-content button:hover {
+    background-color: #005bb5;
+    transform: translateY(-2px);
+}
+
+.plg-popup-content button:active {
+    transform: translateY(1px);
+}
+
+/* Botón de Cierre */
+.plg-popup-content .plg-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 18px;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.plg-popup-content .plg-close:hover {
+    color: #333;
+}
